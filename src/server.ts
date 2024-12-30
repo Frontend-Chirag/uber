@@ -1,3 +1,4 @@
+import http from 'http';
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
@@ -8,9 +9,16 @@ const port = process.env.PORT || '3000';
 
 const app = express();
 
+
+
 app.use(cors());
 
-app.listen(port, () => {
+
+const server = http.createServer(app);
+
+
+
+server.listen(port, () => {
     console.log(`listening on port ${port}`)
-})
+});
 

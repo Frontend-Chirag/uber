@@ -10,7 +10,7 @@ function RadioGroup({
   return (
     <RadioGroupPrimitive.Root
       data-slot="radio-group"
-      className={cn("ui-:grid ui-:gap-3", className)}
+      className={cn("ui:grid ui:gap-3", className)}
       {...props}
     />
   )
@@ -24,16 +24,16 @@ function RadioGroupItem({
     <RadioGroupPrimitive.Item
       data-slot="radio-group-item"
       className={cn(
-        "ui-:aspect-square ui-:size-4 ui-:shrink-0 ui-:rounded-full ui-:border ui-:border-input ui-:text-primary ui-:shadow-xs ui-:transition-[color,box-shadow] ui-:outline-none ui-:focus-visible:border-ring ui-:focus-visible:ring-[3px] ui-:focus-visible:ring-ring/50 ui-:disabled:cursor-not-allowed ui-:disabled:opacity-50 ui-:aria-invalid:border-destructive ui-:aria-invalid:ring-destructive/20 ui-:dark:bg-input/30 ui-:dark:aria-invalid:ring-destructive/40",
+        "ui:aspect-square ui:size-4 ui:shrink-0 ui:rounded-full ui:border ui:border-input ui:text-primary ui:shadow-xs ui:transition-[color,box-shadow] ui:outline-none ui:focus-visible:border-ring ui:focus-visible:ring-[3px] ui:focus-visible:ring-ring/50 ui:disabled:cursor-not-allowed ui:disabled:opacity-50 ui:aria-invalid:border-destructive ui:aria-invalid:ring-destructive/20 ui:dark:bg-input/30 ui:dark:aria-invalid:ring-destructive/40",
         className
       )}
       {...props}
     >
       <RadioGroupPrimitive.Indicator
         data-slot="radio-group-indicator"
-        className="ui-:relative ui-:flex ui-:items-center ui-:justify-center"
+        className="ui:relative ui:flex ui:items-center ui:justify-center"
       >
-        <CircleIcon className="ui-:absolute ui-:top-1/2 ui-:left-1/2 ui-:size-2 ui-:-translate-x-1/2 ui-:-translate-y-1/2 ui-:fill-primary" />
+        <CircleIcon className="ui:absolute ui:top-1/2 ui:left-1/2 ui:size-2 ui:-translate-x-1/2 ui:-translate-y-1/2 ui:fill-primary" />
       </RadioGroupPrimitive.Indicator>
     </RadioGroupPrimitive.Item>
   )

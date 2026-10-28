@@ -6,7 +6,7 @@ import {
   MoreHorizontalIcon,
 } from "lucide-react"
 
-import { buttonVariants, type Button } from "@/components/ui/button"
+import { buttonVariants, type Button } from "./button"
 
 function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
   return (
@@ -14,7 +14,7 @@ function Pagination({ className, ...props }: React.ComponentProps<"nav">) {
       role="navigation"
       aria-label="pagination"
       data-slot="pagination"
-      className={cn("ui-:mx-auto ui-:flex ui-:w-full ui-:justify-center", className)}
+      className={cn("ui:mx-auto ui:flex ui:w-full ui:justify-center", className)}
       {...props}
     />
   )
@@ -27,7 +27,7 @@ function PaginationContent({
   return (
     <ul
       data-slot="pagination-content"
-      className={cn("ui-:flex ui-:flex-row ui-:items-center ui-:gap-1", className)}
+      className={cn("ui:flex ui:flex-row ui:items-center ui:gap-1", className)}
       {...props}
     />
   )
@@ -73,11 +73,11 @@ function PaginationPrevious({
     <PaginationLink
       aria-label="Go to previous page"
       size="default"
-      className={cn("ui-:gap-1 ui-:px-2.5 ui-:sm:pl-2.5", className)}
+      className={cn("ui:gap-1 ui:px-2.5 ui:sm:pl-2.5", className)}
       {...props}
     >
       <ChevronLeftIcon />
-      <span className="ui-:hidden ui-:sm:block">Previous</span>
+      <span className="ui:hidden ui:sm:block">Previous</span>
     </PaginationLink>
   )
 }
@@ -90,10 +90,10 @@ function PaginationNext({
     <PaginationLink
       aria-label="Go to next page"
       size="default"
-      className={cn("ui-:gap-1 ui-:px-2.5 ui-:sm:pr-2.5", className)}
+      className={cn("ui:gap-1 ui:px-2.5 ui:sm:pr-2.5", className)}
       {...props}
     >
-      <span className="ui-:hidden ui-:sm:block">Next</span>
+      <span className="ui:hidden ui:sm:block">Next</span>
       <ChevronRightIcon />
     </PaginationLink>
   )
@@ -107,11 +107,11 @@ function PaginationEllipsis({
     <span
       aria-hidden
       data-slot="pagination-ellipsis"
-      className={cn("ui-:flex ui-:size-9 ui-:items-center ui-:justify-center", className)}
+      className={cn("ui:flex ui:size-9 ui:items-center ui:justify-center", className)}
       {...props}
     >
-      <MoreHorizontalIcon className="ui-:size-4" />
-      <span className="ui-:sr-only">More pages</span>
+      <MoreHorizontalIcon className="ui:size-4" />
+      <span className="ui:sr-only">More pages</span>
     </span>
   )
 }

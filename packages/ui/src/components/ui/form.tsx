@@ -14,7 +14,7 @@ import {
   type FieldValues,
 } from "react-hook-form"
 
-import { Label } from "@/components/ui/label"
+import { Label } from "./label"
 
 const Form = FormProvider
 
@@ -80,7 +80,7 @@ function FormItem({ className, ...props }: React.ComponentProps<"div">) {
     <FormItemContext.Provider value={{ id }}>
       <div
         data-slot="form-item"
-        className={cn("ui-:grid ui-:gap-2", className)}
+        className={cn("ui:grid ui:gap-2", className)}
         {...props}
       />
     </FormItemContext.Provider>
@@ -97,7 +97,7 @@ function FormLabel({
     <Label
       data-slot="form-label"
       data-error={!!error}
-      className={cn("ui-:data-[error=true]:text-destructive", className)}
+      className={cn("ui:data-[error=true]:text-destructive", className)}
       htmlFor={formItemId}
       {...props}
     />
@@ -129,7 +129,7 @@ function FormDescription({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="form-description"
       id={formDescriptionId}
-      className={cn("ui-:text-sm ui-:text-muted-foreground", className)}
+      className={cn("ui:text-sm ui:text-muted-foreground", className)}
       {...props}
     />
   )
@@ -147,7 +147,7 @@ function FormMessage({ className, ...props }: React.ComponentProps<"p">) {
     <p
       data-slot="form-message"
       id={formMessageId}
-      className={cn("ui-:text-sm ui-:text-destructive", className)}
+      className={cn("ui:text-sm ui:text-destructive", className)}
       {...props}
     >
       {body}

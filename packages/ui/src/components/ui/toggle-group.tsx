@@ -3,7 +3,7 @@ import { type VariantProps } from "class-variance-authority"
 import { cn } from "cn"
 import { ToggleGroup as ToggleGroupPrimitive } from "radix-ui"
 
-import { toggleVariants } from "@/components/ui/toggle"
+import { toggleVariants } from "./toggle"
 
 const ToggleGroupContext = React.createContext<
   VariantProps<typeof toggleVariants> & {
@@ -34,7 +34,7 @@ function ToggleGroup({
       data-spacing={spacing}
       style={{ "--gap": spacing } as React.CSSProperties}
       className={cn(
-        "ui-:group/toggle-group ui-:flex ui-:w-fit ui-:items-center ui-:gap-[--spacing(var(--gap))] ui-:rounded-md ui-:data-[spacing=default]:data-[variant=outline]:shadow-xs",
+        "ui:group/toggle-group ui:flex ui:w-fit ui:items-center ui:gap-[--spacing(var(--gap))] ui:rounded-md ui:data-[spacing=default]:data-[variant=outline]:shadow-xs",
         className
       )}
       {...props}
@@ -67,8 +67,8 @@ function ToggleGroupItem({
           variant: context.variant || variant,
           size: context.size || size,
         }),
-        "ui-:w-auto ui-:min-w-0 ui-:shrink-0 ui-:px-3 ui-:focus:z-10 ui-:focus-visible:z-10",
-        "ui-:data-[spacing=0]:rounded-none ui-:data-[spacing=0]:shadow-none ui-:data-[spacing=0]:first:rounded-l-md ui-:data-[spacing=0]:last:rounded-r-md ui-:data-[spacing=0]:data-[variant=outline]:border-l-0 ui-:data-[spacing=0]:data-[variant=outline]:first:border-l",
+        "ui:w-auto ui:min-w-0 ui:shrink-0 ui:px-3 ui:focus:z-10 ui:focus-visible:z-10",
+        "ui:data-[spacing=0]:rounded-none ui:data-[spacing=0]:shadow-none ui:data-[spacing=0]:first:rounded-l-md ui:data-[spacing=0]:last:rounded-r-md ui:data-[spacing=0]:data-[variant=outline]:border-l-0 ui:data-[spacing=0]:data-[variant=outline]:first:border-l",
         className
       )}
       {...props}

@@ -8,13 +8,13 @@
     "css": "src/styles/globals.css",
     "baseColor": "neutral",
     "cssVariables": true,
-    "prefix": "ui-",
+    "prefix": "ui",
     "rsc": true
   },
   "aliases": {
     "components": "@/components",
     "utils": "@/lib/utils",
-    "ui": "@/components/ui",
+    "ui": ".",
     "lib": "@/lib",
     "hooks": "@/hooks"
   },

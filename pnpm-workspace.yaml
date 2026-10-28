@@ -2,4 +2,6 @@ packages:
   - "apps/*"
   - "packages/*"
 allowBuilds:
-  'true': true
+  "@parcel/watcher": true
+  protobufjs: true
+  unrs-resolver: true
